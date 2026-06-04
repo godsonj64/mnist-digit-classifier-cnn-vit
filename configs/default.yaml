@@ -1,0 +1,24 @@
+seed: 42
+device: auto            # auto | cpu | cuda
+
+data:
+  root: data           # contains train/ and val/ subfolders
+  image_size: 32       # images resized to this square size
+  num_classes: 10
+  batch_size: 128
+  num_workers: 2
+  auto_download: true  # download MNIST into ImageFolder layout if missing
+
+model:
+  name: efficientnet_b0   # baseline_cnn | efficientnet_b0 | cnn_vit
+  pretrained: true        # used by efficientnet_b0 transfer learning
+
+train:
+  epochs: 20
+  lr: 0.001
+  weight_decay: 0.0001
+  output_dir: outputs
+
+export:
+  formats: [onnx, torchscript]
+  output_dir: outputs

@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+outputs/
+data/train/
+data/val/
+data/_mnist_raw/
+*.onnx
+*.ts
+*.pt
+.pytest_cache/
